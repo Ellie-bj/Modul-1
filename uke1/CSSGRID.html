@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            padding:0;
+            margin:0;
+        }
+        .page{
+            display:grid;
+            height:100vh;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: auto 10fr 40px;
+            grid-template-areas: 
+            'header header'
+            'menu main'
+            'footer footer'
+            ;
+            max-width: auto;
+        }
+        .header{
+            background-color: rgb(117, 166, 230);
+            grid-area:header;
+            text-align: center;
+            color:white;
+        }
+
+        .main{
+            background-color: rgb(241, 241, 241);
+            grid-area:main;
+        }
+
+        .footer{
+            background-color:rgb(104, 104, 104);
+            grid-area:footer;
+            text-align: end;
+            text-decoration-color: honeydew;
+            color:white;
+        }
+
+        .menu{
+            background-color: rgb(231, 231, 231);
+            grid-area:menu;
+        }
+
+        .menu p{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="page">
+        <div class="header">
+            <h1>My website</h1>
+        </div>
+        <div class="main">
+            <h3>Home page</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis tellus justo, nec sollicitudin nunc blandit vitae. Aliquam tristique viverra malesuada. Donec ex enim, tincidunt et urna quis, fringilla vulputate dolor. Cras facilisis tellus sem, id finibus leo vestibulum id. Maecenas tincidunt arcu sit amet urna tincidunt, id feugiat tortor gravida. Suspendisse auctor elit in sem porta posuere. Phasellus dapibus eleifend pharetra. Morbi semper nunc sem, non rhoncus risus egestas et. Vivamus convallis dui non tristique tristique. Donec sodales sed eros ut dictum.</p>
+            <p>Suspendisse finibus, magna a egestas auctor, enim libero pretium risus, sit amet facilisis nisi metus at ligula. Vivamus non volutpat ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vitae lectus vehicula, finibus nulla eu, faucibus nunc. Nunc et pretium dui, vel feugiat sapien. Suspendisse tempus suscipit diam at dapibus. Cras malesuada sagittis turpis, sit amet malesuada nunc scelerisque eget.</p>
+            <p>Nam consectetur vitae lacus nec iaculis. Fusce nisi libero, finibus non nisl ut, commodo sollicitudin mi. In nisl neque, auctor eu enim eu, finibus ultricies justo. Aenean ut consectetur nisl. Nullam id ullamcorper quam, sit amet interdum orci. Quisque egestas tincidunt volutpat. Sed nec consectetur leo. Suspendisse vitae efficitur quam. Donec hendrerit finibus nisi. Sed quis risus nec nisi placerat volutpat in suscipit ligula.</p>
+        </div>
+        <div class="menu">
+            <h3>Navigation</h3>
+            <p> 
+                Home    <br>
+                About   <br>
+                Contact
+            </p>
+        </div>
+        <div class="footer">Copyright ©2014 Jake Wright</div>
+        
+    </div>
+
+
+</body>
+</html>
