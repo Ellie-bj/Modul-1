@@ -12,3 +12,10 @@
 <p>
   SVG       : https://ellie-bj.github.io/Modul-1/uke1/SVG.html
 </p>
+
+
+<h2>uke2</h2>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
