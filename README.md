@@ -15,7 +15,9 @@
 
 
 <h2>uke2:</h2>
-<p></p>
+<p>
+  Onclick  :https://ellie-bj.github.io/Modul-1/uke2/Onclick-og-kjøre-funksjon.html
+</p>
 <p></p>
 <p></p>
 <p></p>
