@@ -16,8 +16,21 @@
 
 <h2>uke2:</h2>
 <p>
-  Onclick  :https://ellie-bj.github.io/Modul-1/uke2/Onclick-og-kjøre-funksjon.html
+  1 - Onclick og kjøre funksjon:<br>
+          https://ellie-bj.github.io/Modul-1/uke2/1%20-%20Onclick-og-kjøre-funksjon.html
 </p>
-<p></p>
-<p></p>
-<p></p>
+
+<p>
+  2 - Alternative eventhandlere.html:<br>
+          https://ellie-bj.github.io/Modul-1/uke2/2%20-%20Alternative%20eventhandlere.html
+</p>
+
+<p>
+ 3 - Nøkkelordet.html:<br>
+          https://ellie-bj.github.io/Modul-1/uke2/3%20-%20Nøkkelordet.html 
+</p>
+
+<p>
+  4 - Variabel utenfor funksjon og innenfor funksjon:<br>
+          https://ellie-bj.github.io/Modul-1/uke2/4%20-%20Variabel_utenfor_funksjon_og_innenfor_funksjon
+</p>
