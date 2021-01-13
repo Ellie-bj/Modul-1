@@ -32,5 +32,5 @@
 
 <p>
   4 - Variabel utenfor funksjon og innenfor funksjon:<br>
-          https://ellie-bj.github.io/Modul-1/uke2/4%20-%20Variabel_utenfor_funksjon_og_innenfor_funksjon
+          https://ellie-bj.github.io/Modul-1/uke2/4%20-%20Variabel%20utenfor%20funksjon%20og%20innenfor%20funksjon,%20samt%20sette%20sammen%20tekst%20av%20flere%20deler,%20lagre%20tekst%20og%20tall%20i%20variabel
 </p>
