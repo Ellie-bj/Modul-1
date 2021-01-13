@@ -2,9 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
-<body>
-    
+<body onload="testOnLoad()">
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input type="text" onchange="testOnChange()" oninput="testOnInput()" />
+    <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()">Test test test</h3>
+    <h2 id="info"></h2>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+        function testOnLoad() {
+            //document.getElementById('info').innerHTML += '<li>onload</li>';
+            console.log("testOnLoad");
+        }
+
+        function testOnChange() {
+            //document.getElementById('info').innerHTML += '<li>onchange</li>';
+            console.log("testOnChange");
+        }
+
+        function testOnInput() {
+            //document.getElementById('info').innerHTML += '<li>oninput</li>';
+            console.log("testOnInput");
+        }
+
+        function testOnMouseOver() {
+            //document.getElementById('info').innerHTML += '<li>onmouseover</li>';
+            console.log("testOnMouseOver");
+        }
+
+        function testOnMouseOut() {
+            //document.getElementById('info').innerHTML += '<li>onmouseout</li>';
+            console.log("testOnMouseOut");
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kode lås</h1>
+    <div id="output"></div>
+
+
+    <table>
+        <tr>
+            <td><button onclick="something(this)">1</button></td>
+            <td><button onclick="something(this)">2</button></td>
+            <td><button onclick="something(this)">3</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="something(this)">4</button></td>
+            <td><button onclick="something(this)">5</button></td>
+            <td><button onclick="something(this)">6</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="something(this)">7</button></td>
+            <td><button onclick="something(this)">8</button></td>
+            <td><button onclick="something(this)">9</button></td>
+        </tr> <tr>
+            <td></td>
+            <td><button onclick="something(this)">0</button></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+       function something(tall) {
+            document.getElementById('output').innerHTML += tall.innerHTML
+        }
+    </script>
+</body>
+</html>
