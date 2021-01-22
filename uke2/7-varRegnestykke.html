@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="tallA" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <input id="tallB" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <br>
+    <input id="widthSlider" type="range" min="1" max="1000" step="1" oninput="calculate()" value="2" />
+    <input id="heightSlider" type="range" min="1" max="1000" step="1" oninput="calculate()" value="2" />
+
+    <div id="resultat"></div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+        var widhtInput = document.getElementById('widthSlider');
+        var heightInput = document.getElementById('heightSlider');
+
+
+        calculate();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var bredde = parseInt(widhtInput.value);
+            var høyde = parseInt(heightInput.value);
+            var areal = bredde * høyde;
+            var omkrets = 2*bredde + 2*høyde;
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient + '<br/>' + '<hr/>' +
+                'Areal:' + bredde + '*' + høyde + '=' + areal + '<br/>' +
+                'omkrets:' + '2*' + bredde + '+' + '2*' + høyde + '=' +  omkrets;
+        
+        }
+        /*
+        Oppgave
+        Lag en slider for å velge bredde fra 1 til 1000 og en slider for å velge høyde fra 1 til 1000. 
+        Vis en div med valgt bredde og høyde 
+        - og legg inn tekst i diven som viser arealet (bredde*høyde) og omkretsen (2*bredde+2*høyde).
+        */
+    </script>
+</body>
+</html>
