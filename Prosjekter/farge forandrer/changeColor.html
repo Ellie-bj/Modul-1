@@ -9,6 +9,7 @@
     <script>
         function updateView(){
             document.getElementById('app').innerHTML =`
+            <div id="rgb"></div>
             <button onclick="changeBacgroundColor()">Change color!</button>
             `;
         }
@@ -24,6 +25,7 @@
 
         function changeBacgroundColor(){
             document.body.style.backgroundColor = randomColor();
+            document.getElementById('rgb').innerHTML =`rgb(${randomNumber255()},${randomNumber255()},${randomNumber255()})`;
         }
     </script>
 </body>
