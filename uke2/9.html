@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .effectOne{
+            background-color: red;
+            border-style:dotted;
+            border-color: darkblue;
+        }
+        .effectTwo{
+            background-color: blue;
+            border-style:dashed;
+            border-color: red;
+            color: silver;
+
+        }
+        .effectThree{
+            background-color: green;
+            border-style:solid;
+            border-color: darkkhaki;
+
+        }
+        .effectFour{
+            background-color: blueviolet;
+            border-style:double;
+            border-color: royalblue;
+
+        }
+        .effectFive{
+            background-color: burlywood;
+            border-style:groove;
+            border-color: sienna;
+
+        }
+    </style>
+</head>
+<body>
+    <p>9 - Endre andre ting enn innerHTML: value, style</p>
+    
+    <hr>
+    <input id="one" type="checkbox"     value="effectOne">    effekt 1<br>
+    <input id="two" type="checkbox"     value="effectTwo">    effekt 2<br>
+    <input id="three" type="checkbox"   value="effectThree">  effekt 3<br>
+    <input id="four" type="checkbox"    value="effectFour">   effekt 4<br>
+    <input id="five" type="checkbox"    value="effectFive">   effekt 5<br>
+
+    <hr>
+    <button onclick="toggleEffect()">   toggle effect</button>
+    <hr>
+
+    <input type="checkbox" id="bla">Bla bla bla
+  
+
+    <script>
+
+        function toggleEffect(){
+            var divOne = document.getElementById("bla").checked;
+            var isChecked = document.getElementById('one').checked;
+
+            if(divOne.checked){
+                document.getElementById('bla').toggle('effectOne', isChecked);
+            }
+        }
+
+/*
+Oppgave
+    Du skal lage en liten applikasjon, hvor du har fem forskjellige effekter (som hver har sin css-klasse). 
+    Så du fem forskjellige diver, som du skal kunne trykke på. 
+    Den du trykker på blir valgt, og når du velger en effekt, skal den slås på eller av for den valgte div-en. 
+    For å få til dette er det mange skritt, og disse er listet opp under:
+
+    Del 1) 
+    Lag fem forskjellige navngitte css-stiler som regulerer ulike ting, for eksempel, border, padding, margin , background-color og color. 
+    Lag en div, og gjør det sånn at når du velger en checkbox, så skrus den tilhørenden effekten på på div-en. 
+    For å få til dette trenger dere funksjonen toggle, som kan brukes slik:
+        head
+         style
+          .stilig {
+            background-color: blueviolet;
+           }
+        /style
+       /head
+    body
+    <div id="bla">Bla bla bla</div>
+    <input id="chk" type="checkbox" onchange="toggleStyle()" />
+    <script>
+    function toggleStyle() {
+    var isChecked = document.getElementById('chk').checked;
+    document.getElementById('bla').classList.toggle('stilig', isChecked);
+    }
+    /script
+    /body
+
+    Del 2) Når man fjerner en check, skal også effekten fjernes på div-en.
+
+    Del 3) Legg til en div til. 
+    Det skal være mulig å velge en av div-ene og hvilken av dem som er valgt skal vises på en måte som du velger helt selv. 
+    Men om du ikke finner på noe, kan du legge til en pil før og etter ved hjelp av denne css-en (som antar at du bruker "selected" som css-klasse for den som er valgt):
+
+    div.selected::before {
+    content: "🡆";
+    }
+
+    div.selected::after {
+    content: "🡄";
+    }
+    Del 4) Når man endrer på checkbox-ene, så skal endringen kun gjelde den valgte div-en
+
+    Del 5) Når man velger en ny div, skal checkbox-ene oppdateres ut fra hvilke effekter den valgte div-en faktisk har skrudd på og av. 
+    For å få til dette, trenger du funksjonen classList.contains(). 
+    Du kan styre om en checkboks skal være valgt eller ikke slik:  document.getElementById('checkboxId').checked = selectedDiv.classList.contains('navnPåCssKlasse');
+*/
+    </script>
+</body>
+</html>

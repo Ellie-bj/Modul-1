@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>8 - Sette variabel til tilfeldig tall(7a - Sette variabel til tilfeldig tall)</p>
+    <div id="resultat"></div>
+    <div id="box">box space</div>
+    <div id="boxHTML" style="font-family: monospace"> div info</div>
+    <!--
+    Last siden på nytt for nye tall.
+    Endre tallet 10 på linje 23 og 24 til noe annet. Hva blir annerledes?
+    Endre tallet 100 på linje 23 og 24 til noe annet. Hva blir annerledes?
+    Ta bort Math.floor() på linje 23 og 24. Hva blir forskjellen?
+    -->
+
+    <script>
+        
+        var resultatDiv = document.getElementById('resultat');
+        calculate();
+
+        function calculate() {
+            var tallA = 100 + Math.floor(Math.random() * 10);
+            var tallB = 100 + Math.floor(Math.random() * 10);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient + '<br/>' + '<hr>';
+                
+        }
+        /*
+        Lag en webside som viser en div med tilfeldig bredde, høyde og border-størrelse. 
+        Vis i tillegg som tekst hvilke tilfeldige verdier som brukes. 
+        */
+       
+        var boxDiv = document.getElementById('box');
+        var boxHtmlDiv = document.getElementById('boxHTML');
+
+        updateView();
+        function updateView(){
+        var borderWidth =   10 + Math.floor(Math.random() * 100);
+        var divHeight   =   100 + Math.floor(Math.random() * 100);
+        var divWidth    =   100 + Math.floor(Math.random() * 100);
+        var divRadius   =   10 + Math.floor(Math.random() * 100);
+            boxDiv.innerHTML ='<div style="'
+            + 'border-style:solid;'
+            + 'border-width:' 
+            + borderWidth + 'px;'
+            + 'border-color:black;'
+            + 'background-color:green;'
+            + 'border-radius:' + divRadius + 'px;'
+            + 'width: ' + divWidth + 'px;'
+            + 'height: ' + divHeight + 'px;'
+            + ''
+            + '">' +'</div>';
+            boxHtmlDiv.innerHTML = '' +
+            'tilfeldig border Width='   + '' + borderWidth  + '</br>' +
+            'tilfeldig div Height='     + '' + divHeight    + '</br>' +
+            'tilfeldig div Width='      + '' + divWidth     + '</br>' +
+            'tilfeldig div radius'      + '' + divRadius;
+            
+            
+        }
+    </script>
+</body>
+</html>

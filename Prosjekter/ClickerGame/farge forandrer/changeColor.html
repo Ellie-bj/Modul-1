@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="updateView()">
+    <div id="app"></div>
+    <script>
+        function updateView(){
+            document.getElementById('app').innerHTML =`
+            <button onclick="changeBacgroundColor()">Change color!</button>
+            `;
+        }
+
+        function randomNumber255(){
+            var randomNumber = Math.floor(Math.random() * 255);
+            return randomNumber;
+        }
+
+        function randomColor(){
+            return`rgb(${randomNumber255()},${randomNumber255()},${randomNumber255()})`;
+        }
+
+        function changeBacgroundColor(){
+            document.body.style.backgroundColor = randomColor();
+        }
+    </script>
+</body>
+</html>
