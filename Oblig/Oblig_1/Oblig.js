@@ -5,14 +5,13 @@ function isDateValid(date){
     && dotPlacement(date)
     && yearLength(date)
     && monthCheck(date)
-    && validDayCheck(date)
-    && leapYear(date);
-    
+    && validDayCheck(date);
+    //&& leapYear(date)
 }
 
 //Teksten må ha lengde 10.
 function checkLength(date){   
-    if(date.length === 10){
+    if(date.length == 10){
         return true;
     } return false;
 }
@@ -26,8 +25,9 @@ function dotPlacement(date){
 
 //År er 0000 eller større. Kan sjekkes med year.length === 4 && year >= '0000' && year <= '9999'
 function yearLength(date){    
-let year = date.substr(6);
-    if(year.length === 4 && year >= '0000' && year <= '9999'){
+let year = date.substr(6,4);
+
+    if(year.length === 4 && year >= '0000' && year <= '9999'){console.log(year);
         return true;
     } return false;
 }
@@ -39,26 +39,21 @@ function monthCheck(date){
         return true;
     } return false;
 }
-//_________________________CHOKE ME LIKE YOU HATE ME WHEN YOU LOVE ME, LOWKEY WANNA DATE ME WHEN YOU FUCK ME.____________FIX ME :( help...
+
 function validDayCheck(date){            
     let day = date.substr(0,2);
     let month = date.substr(3,2);
     let year = date.substr(6,4);
 
-    //30 er lov for alle måneder utenom februar
-    if(day.length === 2 && day >= '01' && day <= '30' && month != '02'){
-        return true;}
-    
-    //31 er lovlig for januar, mars, mai, juli, august, oktober og desember
-    if(day === 31 && month === 01,03,05,07,08,10,12){
-        return true;}
+    let isShortMonth = month === '04' ||  month === '06' || month === '09' || month === '11';
 
-    //En test som viser at 29. februar blir gyldig når det er skuddår
-    if(day == '29' && month == '02' && isLeapYear(year)){
-        return true;} 
-        
-    return false;
+        return day.length === 2 && day >= '01' && day <= '28' 
+        ||day === '29' && (month !== '02'  ||leapYear(date)) 
+        ||day === '30' && month !== '02' 
+        ||day === '31' && !isShortMonth && month !== '02';
+
 }
+
 
 //sjekk skuddår.
 function leapYear(date) {
