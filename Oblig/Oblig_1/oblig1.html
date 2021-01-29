@@ -87,9 +87,9 @@
             assert.equal(validDate, true, 'En test som viser at 29. februar blir gyldig når det er skuddår')
             });
 
-            QUnit.test('Feil. skudd år', function(assert) {
+            QUnit.test('Feil skudd år', function(assert) {
             let validDate = isDateValid('29.02.2021');
-            assert.equal(validDate, false, 'Feil. sjekker skuddår')
+            assert.equal(validDate, false, 'Feil skuddår')
             });
 </script>
 </body>
