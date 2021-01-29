@@ -1,4 +1,8 @@
 # Modul-1
+<h2>Oblig</h2>
+<p>
+uke 4: https://ellie-bj.github.io/Modul-1/Oblig/Oblig_1/oblig1.html
+</p>
 <h2>Prosjekter</h2>
 
 <p>BakgrunsFarge : https://ellie-bj.github.io/Modul-1/Prosjekter/farge%20forandrer/changeColor.html</p>
