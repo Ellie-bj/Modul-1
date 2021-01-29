@@ -6,7 +6,6 @@ function isDateValid(date){
     && yearLength(date)
     && monthCheck(date)
     && validDayCheck(date);
-    //&& leapYear(date)
 }
 
 //Teksten må ha lengde 10.
@@ -43,7 +42,6 @@ function monthCheck(date){
 function validDayCheck(date){            
     let day = date.substr(0,2);
     let month = date.substr(3,2);
-    let year = date.substr(6,4);
 
     let isShortMonth = month === '04' ||  month === '06' || month === '09' || month === '11';
 
