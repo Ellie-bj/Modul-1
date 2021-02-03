@@ -5,28 +5,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app" style="font-size: 100px;">HEi</div>
+    <div id="app" style="font-size: 100px;"></div>
 <script>
     randoDice();
     function randoDice(){
 
     let app = document.getElementById('app');
-    let number = Math.floor((Math.random() * 6) + 1); 
-        
-    
-    if(number == 1){
-        app.innerHTML =`⚀`;
-    } else if(number == 2) {
-        app.innerHTML = `⚁`;
-    } else if(number == 3){
-        app.innerHTML = `⚂`;
-    }else if(number == 4){
-        app.innerHTML = `⚃`;
-    }else if(number == 5){
-        app.innerHTML = `⚄`;
-    }else if(number == 6){
-        app.innerHTML = `⚅`;
-    }
+    let number = Math.floor(Math.random() * 5); 
+    let dice = [`⚀`,`⚁`,`⚂`,`⚃`,`⚄`,`⚅`]
+
+        if(number == 0||1||2||3||4||5){
+            app.innerHTML= dice[number];
+        }
+
+    // let dice = [`⚀`,`⚁`,`⚂`,`⚃`,`⚄`,`⚅`]
+
+    // for(let i = Math.floor(Math.random() * 5); i < dice.length; i++){
+    //     document.innerHTML(dice[i]);
+    // }
+
+    // if(number == 1){
+    //     app.innerHTML =`⚀`;
+    // } else if(number == 2) {
+    //     app.innerHTML = `⚁`;
+    // } else if(number == 3){
+    //     app.innerHTML = `⚂`;
+    // }else if(number == 4){
+    //     app.innerHTML = `⚃`;
+    // }else if(number == 5){
+    //     app.innerHTML = `⚄`;
+    // }else if(number == 6){
+    //     app.innerHTML = `⚅`;
+    // }
 }
 </script>
 </body>
