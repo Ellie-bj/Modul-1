@@ -11,12 +11,14 @@
     function randoDice(){
 
     let app = document.getElementById('app');
-    let number = Math.floor(Math.random() * 5); 
+    let number = Math.floor(Math.random() * 6); 
     let dice = [`⚀`,`⚁`,`⚂`,`⚃`,`⚄`,`⚅`]
 
-        if(number == 0||1||2||3||4||5){
-            app.innerHTML= dice[number];
-        }
+    app.innerHTML= dice[number];
+
+    // if(number == 0||1||2||3||4||5){
+    //      app.innerHTML= dice[number];
+    // }
 
     // let dice = [`⚀`,`⚁`,`⚂`,`⚃`,`⚄`,`⚅`]
 
@@ -24,6 +26,7 @@
     //     document.innerHTML(dice[i]);
     // }
 
+    
     // if(number == 1){
     //     app.innerHTML =`⚀`;
     // } else if(number == 2) {
